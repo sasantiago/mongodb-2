@@ -1,0 +1,192 @@
+// EJERCICIOS DE ELIMINAR
+
+// PUNTO1
+db.userstask.deleteMany({
+    salario:{$lt:2000}
+})
+// PUNTO2
+db.userstask.deleteMany({
+    edad:{$lt:25}
+})
+// PUNTO3
+db.userstask.deleteMany({
+    ciudad:"Paris"
+})
+// PUNTO4
+db.userstask.deleteMany({
+    peso:{$gt:180}
+})
+// PUNTO5
+db.userstask.deleteMany({
+    altura:{$lt:160}
+})
+// PUNTO6
+db.userstask.deleteMany({
+    nombre:"Jhon",
+    apellido:"Doe"
+})
+// PUNTO7
+db.userstask.deleteMany({
+    correo:"borrar@riwi.com"
+})
+// PUNTO8
+db.userstask.deleteMany({
+    correo:{exists:false}
+})
+// PUNTO9
+db.userstask.deleteMany({
+    ciudad:"Tokio"
+})
+// PUNTO10
+db.userstask.deleteMany({
+    edad:{$lt:18}
+})
+// PUNTO11
+db.userstask.deleteMany({
+    salario:{$eq:0}
+})
+// PUNTO12
+db.userstask.deleteMany({
+    ciudad:"New York",
+    salario:{$gt:5000}
+})
+// PUNTO13
+db.userstask.deleteMany({
+    correo:/spam/
+})
+// PUNTO14
+db.userstask.deleteMany({
+    ciudad:"Bello",
+    edad:{$gt:50}
+})
+
+// PUNTO15
+db.userstask.deleteMany({
+    apellido : "González"
+})
+// PUNTO16
+db.userstask.deleteMany({
+    edad : {$gt:70}
+})
+// PUNTO17
+db.userstask.deleteMany({
+    país : "Canada",
+    salario:{$lt:4000}
+})
+// PUNTO18
+db.userstask.deleteMany({
+    salario:{$gte:1000},
+    salario:{$lte:2000}
+})
+// PUNTO19
+db.userstask.deleteMany({
+    edad:{$eq:30}
+})
+// PUNTO20
+db.userstask.deleteMany({
+    altura:{$gt:190}
+})
+
+// EJERCICIOS DE ACTUALIZAR
+
+// PUNTO1
+db.userstask.updateMany({},
+    {$mul:{salario:1.1} } 
+)
+
+// PUNTO2
+db.userstask.updateMany({},
+    {ciudad:"New york"},
+    {$set:{ciudad:"Los Angeles"}}
+)
+
+
+// PUNTO3
+db.userstask.updateMany(
+    {nombres:"Juan",apellidos:"Perez"},
+    {$set:{correo:"nuevo@riwi.com"}}
+)
+// PUNTO4
+db.userstask.updateMany(
+    {correo:"ejemplo@riwi.es"},
+    {$set:{edad:35}}
+)
+// PUNTO5
+db.userstask.updateMany(
+    {país:"México"},
+    {$set:{país:"Canada"}}
+)
+// PUNTO6
+db.userstask.updateMany({},
+    {$inc:{altura:5}}
+)
+// PUNTO7
+db.userstask.updateMany(
+    {correo:"otro@riwi.net"},
+    {$set:{apellidos:"González"}})
+// PUNTO8
+db.userstask.updateMany(
+    {nombres:"Maria"},
+    {$set:{peso:140}})
+
+// PUNTO9
+db.userstask.updateMany(
+    {país:"Estados Unidos"},
+    {$mul:{salario:1.5}})
+
+// PUNTO10
+db.userstask.updateMany(
+    {nombres:"Pedro"},
+    {$set:{correo:"nuevo_correo@riwi.co"}})
+
+// PUNTO11
+db.userstask.updateMany(
+    {edad:{$lt:30}},
+    {$set:{edad:30}})
+
+// PUNTO12
+db.userstask.updateMany(
+    {salario:{$lt:3000}},
+    {$mul:{salario:1.2}})
+
+// PUNTO13
+db.userstask.updateMany(
+    {ciudad:"Bogotá"},
+    {$set:{ciudad:"Medellín"}})
+
+// PUNTO14
+db.userstask.updateMany({salario:
+    {$gt:5000}},
+    {$set:{ciudad:"Australia"}})
+
+// PUNTO15
+db.userstask.updateMany(
+    {edad:{$gt:50}},
+    {$inc:{edad:-5}})
+
+// PUNTO16
+db.userstask.updateMany(
+    {peso:{$gt:200}},
+    {$set:{peso:180}})
+
+// PUNTO17
+db.userstask.updateMany(
+    {ciudad:"London"},
+    {$mul:{salario:1.25}})
+
+// PUNTO18
+db.userstask.updateMany(
+    {salario:{$gt:4000}},
+    {$set:{apellidos:"Smith"}})
+
+// PUNTO19
+db.userstask.updateMany(
+    {correo:/^A/},
+    {$set:{correo:"nuevo@riwi.es"}})
+
+// PUNTO20
+db.userstask.updateMany(
+    {altura:{$lt:160}},
+    {$set:{ciudad:"Paris"}})
+    //prueba
+db.userstask.find()
